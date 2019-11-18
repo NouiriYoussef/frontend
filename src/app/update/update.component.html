@@ -1,0 +1,9 @@
+<form><table>
+    <tr><td colspan="2">modifier rappel</td></tr>
+    <tr><td>Text:</td><td><input class="form-control" [(ngModel)]="event.text" type="text" name="d"></td></tr>
+    <tr><td>Titre:</td><td><input class="form-control" [(ngModel)]="event.titre"  type="text" name="p"></td></tr>
+    <tr><td>Date:</td><td><input class="form-control" [(ngModel)]="event.date"  type="date" name="s"></td></tr>
+    <tr><td colspan="2"><input type="button" class="btn btn-primary" (click)='save()' value="modifier"></td></tr>
+    
+</table>
+    </form>
