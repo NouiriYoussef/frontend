@@ -1,10 +1,16 @@
+<input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+<br>
 <table class="table table-bordered">
 <tr><td>Titre</td><td>Texte</td><td>Date</td><td>Action</td></tr>
- <tr *ngFor="let eve of events">
+ <tr *ngFor="let eve of events |   LockFilter: query |   paginate: { itemsPerPage: 2, currentPage: p } ">
     <td>{{eve.titre}}</td><td>{{eve.text}}</td><td>{{eve.date}}</td><td><button class="btn btn-info" (click)='update(eve)'>Modifier</button><button (click)='delete(eve)' class="btn btn-danger">supprimer</button></td></tr>
 
 
 
 </table> 
+
+<br>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+
 <br><a href="#" (click)='deco()'>Deconnexion</a>
 

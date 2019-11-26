@@ -10,20 +10,23 @@ import { UpdateComponent } from './update/update.component';
 import { FormsModule } from '@angular/forms';
 import { from } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchPipe } from './pipes/search.pipe';
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
     ConnexionComponent,
     AjoutComponent,
     AffichageComponent,
-    UpdateComponent
+    UpdateComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

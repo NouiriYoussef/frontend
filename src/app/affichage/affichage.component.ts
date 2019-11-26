@@ -9,6 +9,8 @@ import {Event} from '../classes/event';
 export class AffichageComponent implements OnInit {
 events: Event[];
 event: Event ;
+public search: any = '';
+p: number = 1;
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
